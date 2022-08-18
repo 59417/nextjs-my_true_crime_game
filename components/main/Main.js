@@ -22,6 +22,7 @@ export default function Main(props) {
             setStates(JSON.parse(localStorageState));
         };
     }, [
+        setStates,
         props.isTest  // for testing
     ]);
 
