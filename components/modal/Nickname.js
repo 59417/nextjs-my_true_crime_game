@@ -9,13 +9,20 @@ export default function Nickname() {
     const router = useRouter();
 
     const { register, handleSubmit } = useForm();
+    
+    const ids = [1,2,3,4];
+    const initStates = { 
+        visited: Object.fromEntries(ids.map(ele => [ele, false])),
+        hint: Object.fromEntries(ids.map(ele => [ele, { 1: false, 2: false, 3: false }])),
+        pass: Object.fromEntries(ids.map(ele => [ele, false])),
+    };;
 
     const myHandleSubmit = (data) => { 
         const nickname = data.nickname;
         localStorage.setItem("nickname", nickname);
+        localStorage.setItem("state", JSON.stringify(initStates));
         router.push('/intro1');
     };
-
 
     return (
         <form onSubmit={handleSubmit(myHandleSubmit)} >

@@ -4,27 +4,27 @@ import MainTopBtn from "./MainTopBtn";
 import MainContent from "./MainContent";
 
 export default function Main(props) {
-
-    const ids = Array.from({length: 4}, (v,k) => k+1);
-    const helpHref = "/modal/help";
     
     const [states, setStates] = useState({});
     useEffect(() => { 
         const localStorageState = localStorage.getItem("state");
-        if (!localStorageState) {
-            const initStates = { 
-                visited: Object.fromEntries(ids.map(ele => [ele, false])),
-                hint: Object.fromEntries(ids.map(ele => [ele, { 1: false, 2: false, 3: false }])),
-                pass: Object.fromEntries(ids.map(ele => [ele, false])),
-            };
-            localStorage.setItem("state", JSON.stringify(initStates));
-        } else {
-            setStates(JSON.parse(localStorageState));
-        };
-    }, [
+        setStates(JSON.parse(localStorageState));
+        // if (!localStorageState) {
+        //     const initStates = { 
+        //         visited: Object.fromEntries(ids.map(ele => [ele, false])),
+        //         hint: Object.fromEntries(ids.map(ele => [ele, { 1: false, 2: false, 3: false }])),
+        //         pass: Object.fromEntries(ids.map(ele => [ele, false])),
+        //     };
+        //     localStorage.setItem("state", JSON.stringify(initStates));
+        // } else {
+        //     setStates(JSON.parse(localStorageState));
+        // };
+    }, 
+    [
         setStates,
-        props.isTest  // for testing
-    ]);
+        // props.isTest  // for testing
+    ]
+    );
 
 
     const getStageHref = (id) => {
@@ -33,9 +33,9 @@ export default function Main(props) {
         const pass = new Object(states.pass);
         const allPass = !Object.keys(pass).map((key, idx) => pass[key]).includes(false);
         if (allPass) {
-            return 'finale';
+            return '/finale';
         } else if (isVisited) { 
-            return states.pass[id.toString()] ? `pass/${id}` : `/stage${id}`; 
+            return states.pass[id.toString()] ? `/pass/${id}` : `/stage${id}`; 
         } else { 
             return `/modal/guide${id}`; 
         };
