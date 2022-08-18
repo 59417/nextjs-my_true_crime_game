@@ -1,0 +1,18 @@
+.btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 40px;
+    right: 6vw;
+
+    button {
+        text-align: left;
+        padding: 0.4rem;
+        width: 50px;
+        background-color:rgb(80, 45, 45);
+        color:coral;
+        border-radius: 2px;
+        border: 1.5px solid coral;
+    }
+}

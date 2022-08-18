@@ -1,0 +1,56 @@
+.title {
+    color: saddlebrown;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 2rem 0;
+}
+
+.wanted {
+    background-color: peru;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .text_wrapper {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        color: antiquewhite;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .img_wrapper {
+        background-color: bisque;
+        width: 80%;
+        height: 260px;
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 7px;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+}
+
+#start_btn {
+    margin: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: rgb(71, 46, 22);
+    border: none;
+    color: whitesmoke;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,69 @@
+.content {
+    width: 80vw;
+
+    h1 {
+        color:peru;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border-bottom: 1px solid lemonchiffon;
+        padding: 1rem 0;
+    }
+
+    .img_wrapper {
+        margin-top: 1rem;
+    }
+
+    #congrats_img {
+        margin-top: 2rem;
+    }
+
+    p, ul {
+        color:whitesmoke;
+        padding: 2rem 1rem;
+        line-height: 2rem;
+        background-color: rgba(255, 255, 255, 0.138);
+
+        li {
+            text-align: justify;
+            list-style-type: disc;
+
+            &:nth-child(2n) {
+                color:antiquewhite;
+            }
+        }
+    }
+
+    ul {
+        padding-left: 1.8rem;
+    }
+
+    #congrats_p {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        padding: 0.2rem 0;
+        background-color:lemonchiffon;
+        border: none;
+        border-radius: 30px;
+        color:rgb(80, 45, 45);
+        margin: 2rem 0;
+    }
+
+    #intro2_ok {
+        background-color:coral; 
+        color: white;
+    }
+}
+
+#coupon_back {
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    width: 70px;
+    padding: 0.4rem;
+    border-radius: 5px;
+    border: 0.5px solid;
+}

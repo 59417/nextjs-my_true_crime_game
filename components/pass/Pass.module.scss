@@ -1,0 +1,64 @@
+.content {
+    width: 80vw;
+
+    h1 {
+        color:peru;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border-bottom: 1px solid lemonchiffon;
+        padding: 1rem 0;
+    }
+
+    p {
+        padding: 0.2rem;
+        color:whitesmoke;
+        background-color: rgb(145, 73, 0);
+    }
+
+    ul {
+        padding: 0.5rem 1rem 0.2rem 1.8rem;
+        color:rgb(181, 181, 181);
+        line-height: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.138);
+
+        li {
+            text-align: justify;
+            list-style-type: disc;
+            margin-top: 0.5rem;
+
+            strong {
+                color: white;
+            }
+        }
+
+        a {
+            display: block;
+            margin: 0.5rem 0;
+            color: lightsalmon; 
+        }
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        background-color:lemonchiffon;
+        border: none;
+        border-radius: 30px;
+        color:rgb(80, 45, 45);
+        margin: 1rem 0;
+    }
+
+    #photo_btn {
+        border-radius: 5px;
+        width: 120px;
+        height: 30px;
+        position: relative;
+
+        #photo_icon {
+            position: absolute;
+            right: 12px;
+            bottom: 9px;
+        }
+    }
+}

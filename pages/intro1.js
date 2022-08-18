@@ -1,19 +1,19 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Start from '../components/Start/Start';
+import Intro1 from '../components/intro/Intro1';
 
-export default function Home() {
+export default function PageIntro1() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>My Game</title>
-        <meta name="description" content="My Game" />
+        <title>My Game - Story</title>
+        <meta name="description" content="The story of my game" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <Start />
+        <Intro1 />
       </main>
 
       <footer className={styles.footer}>
@@ -21,4 +21,4 @@ export default function Home() {
       </footer>
     </div>
   )
-}
+};

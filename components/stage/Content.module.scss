@@ -1,0 +1,115 @@
+.container {
+    z-index: 1;
+    height: 506px;
+    
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .content_wrapper {
+        background-color: brown;
+        border: 1px solid coral;
+        border-radius: 5px;
+        color: white;
+        height: 440px;
+        padding: 1rem;
+    
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 3rem);
+        
+            .img_wrapper {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0.5rem 0 1rem 0;
+            }
+
+            #stage_img_wrapper {
+                width: 220px;
+                height: 310px;
+                margin-top: 0;
+            }
+
+            #hint_spoiler_wrapper {
+                width: 130px;
+                height: 150px;
+                margin-top: 1rem;
+            }
+
+            p {
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                max-height: 100%;
+                overflow: scroll;
+            }
+
+            #hint_text_p {
+                text-align: justify;
+            }
+
+            #hint_spoiler_p {
+                font-size: 0.9rem;
+            }
+
+            #hint_alert_p {
+                width: 220px;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        
+            input {
+                width: 100%;
+                height: 2rem;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+            }
+        
+            #stage_btn {
+                margin-top: 0;
+            }
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            width: 80px;
+            padding: 0.5rem 1rem;
+            background-color: indianred;
+            color: antiquewhite;
+            margin-top: 1rem;
+        }
+
+        #stage_content {
+            height: auto;
+        }
+
+        .btn_wrapper {
+            display: flex;
+            justify-content: space-around;
+
+            #no {
+                color:crimson;
+                background-color:snow;
+            }
+            #yes {
+                color:forestgreen;
+                background-color:snow;
+            }
+        }
+    }
+
+    #hint_content_wrapper {
+        background-color: rgb(80, 45, 45);
+    }
+}
+
+#hint_container {
+    max-width: 254px;
+}

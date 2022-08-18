@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    
+    button {
+        border-radius: 5px;
+        border: 0.5px solid;
+        padding: 0.5rem;
+        min-width: 70px; 
+    }
+}
+
+
+#main_quit, #stage_back {
+    background-color: lightblue;
+    color: darkblue;
+    border-color: darkblue;
+}
+
+#main_help, #stage_guide {
+    background-color: lemonchiffon;
+    color:saddlebrown;
+    border-color: saddlebrown;
+}
+
+#main_coupon {
+    background-color:mediumaquamarine;
+    color: darkgreen;
+    border-color: darkgreen
+}

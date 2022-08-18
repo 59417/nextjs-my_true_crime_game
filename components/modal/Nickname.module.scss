@@ -1,0 +1,50 @@
+.content {
+    margin: 2rem 0;
+
+    h1 {
+        color:burlywood;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 2rem 0;
+    }
+
+    #nickname_input {
+        width: 100%;
+    }
+
+    #agree {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 1rem 0;
+
+        input {
+            height: 1rem;
+            width: 1rem;
+        }
+    
+        label {
+            color:whitesmoke;
+            line-height: 1rem;
+
+            a {
+                color:rgb(181, 45, 45);
+            }
+        }
+    }
+}
+
+.btn_wrapper {
+    display: flex;
+    justify-content: center;
+
+    button {
+        width: 80px;
+        padding: 0.2rem 0;
+        background-color: burlywood;
+        border: none;
+        border-radius: 5px;
+        color: rgb(33, 33, 33); 
+    }
+}

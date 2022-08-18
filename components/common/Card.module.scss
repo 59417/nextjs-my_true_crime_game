@@ -1,0 +1,30 @@
+.container {
+    background-color: coral;
+    border-radius: 10px;
+    height: auto;
+    padding: 1rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    div {
+        width: 100%;
+    }
+
+    h1 {
+        color:mistyrose;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+#main_container {
+    width: 80vw;
+}
+
+#stage_container {
+    position: relative;
+}

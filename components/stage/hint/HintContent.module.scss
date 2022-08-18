@@ -1,0 +1,93 @@
+.container {
+    z-index: 1;
+    height: 506px;
+    max-width: 254px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .content_wrapper {
+        background-color: rgb(80, 45, 45);
+        border: 1px solid coral;
+        border-radius: 5px;
+        color: white;
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        .content {
+            height: calc(100% - 3rem);
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .img_wrapper {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0.5rem 0 1rem 0;
+            }
+
+            #spoiler_wrapper {
+                width: 130px;
+                height: 150px;
+                margin-top: 1rem;
+            }
+
+            p {
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                max-height: 100%;
+                text-align: justify;
+            }
+
+            #spoiler_p {
+                font-size: 0.9rem;
+            }
+
+            #alert {
+                width: 220px;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        }
+    
+        .btn_wrapper {
+            display: flex;
+            justify-content: space-around;
+
+            #no {
+                background-color:snow;
+                color:crimson;
+            }
+            #yes {
+                background-color:snow;
+                color:forestgreen;
+            }
+        }
+    
+        button {
+            border: none;
+            border-radius: 5px;
+            width: 80px;
+            padding: 0.5rem 1rem;
+            background-color: indianred;
+            color: antiquewhite;
+            margin-top: 1rem;
+        }
+    
+        
+    }
+}
