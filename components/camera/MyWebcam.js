@@ -1,6 +1,6 @@
 import Webcam from "react-webcam";
 import { useCallback, useRef, useState, useEffect } from "react";
-import MyCanvas from "./MyCanvas";
+// import MyCanvas from "./MyCanvas";  
 import classes from './MyWebcam.module.scss';
 
 
@@ -41,32 +41,7 @@ export default function MyWebcam(props) {
     return (
         <div className={classes.content}>
 
-            {!imgSrc && (
-                <div className={classes.photo}>
-                    <div id={classes.badges}>
-                        {pass && pass.map((ele,idx) => (
-                            <img key={idx} src="/badge.png" alt="badge" width="60px" height="60px" />
-                        ))}
-                    </div>
-                    <div id={classes.hooray}>
-                        {[1,2,3].map((ele) => (
-                            <img key={ele} src="/celebration.png" alt="hooray" width="80px" height="80px" />
-                        ))}
-                    </div>
-                    <Webcam
-                        ref={webcamRef} 
-                        audio={false}
-                        screenshotFormat="image/jpeg"
-                        videoConstraints={videoConstraints}
-                        width={`100%`}
-                        height={`100%`}
-                        mirrored={videoConstraints.facingMode==="user"}
-                    />
-                </div>
-            )}
-
-
-            {/* <div className={classes.photo}>
+            <div className={classes.photo}>
                 <div id={classes.badges}>
                     {pass && pass.map((ele,idx) => (
                         <img key={idx} src="/badge.png" alt="badge" width="60px" height="60px" />
@@ -92,14 +67,38 @@ export default function MyWebcam(props) {
                         <img src={imgSrc} alt="Screenshot" />
                     </div>
                 )}
-            </div> */}
+            </div>
 
 
-            {imgSrc && (
-                // <div className={classes.photo}>
-                    <MyCanvas src={imgSrc} num={pass.length} />
-                // </div>
+            {/* {!imgSrc && (
+                <div className={classes.photo}>
+                    <div id={classes.badges}>
+                        {pass && pass.map((ele,idx) => (
+                            <img key={idx} src="/badge.png" alt="badge" width="60px" height="60px" />
+                        ))}
+                    </div>
+                    <div id={classes.hooray}>
+                        {[1,2,3].map((ele) => (
+                            <img key={ele} src="/celebration.png" alt="hooray" width="80px" height="80px" />
+                        ))}
+                    </div>
+                    <Webcam
+                        ref={webcamRef} 
+                        audio={false}
+                        screenshotFormat="image/jpeg"
+                        videoConstraints={videoConstraints}
+                        width={`100%`}
+                        height={`100%`}
+                        mirrored={videoConstraints.facingMode==="user"}
+                    />
+                </div>
             )}
+             */}
+             
+            {/* {imgSrc && (
+                <MyCanvas src={imgSrc} num={pass.length} />
+                image are not showing on Safari
+            )} */}
 
             <div className={classes.btn_wrapper}>
                 {!imgSrc && (

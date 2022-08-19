@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from 'react';
-import  { src } from './tempSrc';
 
 
 export default function MyCanvas (props) {
@@ -7,7 +6,7 @@ export default function MyCanvas (props) {
   const canvasRef = useRef(null);
   
   const num = props.num;
-  // const src = props.src;
+  const src = props.src;
   const [windowWidth, setWindowWidth] = useState(null);
 
   
@@ -23,7 +22,6 @@ export default function MyCanvas (props) {
     const xStartA = (currVW - 60*num)/2;
     badgeImg.onload = () => {
       for (let i=0; i<num; i++) {
-        console.log(i);
         context.drawImage(badgeImg, xStartA+60*i, 10, 60, 60);
       }
     };
@@ -41,17 +39,9 @@ export default function MyCanvas (props) {
     image.src = src;
     image.onload = () => {
       context.globalCompositeOperation = 'destination-over';
-      context.beginPath();
-      //我們用moveTo(x,y)來指定線的起點座標
-      context.moveTo(50,50)
-      //之後使用lineTo(x,y)來指定與前一個座標相連的點
-      context.lineTo(100,250)
-      //用stroke()來繪製相連點的線
-      context.stroke()
       context.drawImage(image, 0, 0, currVW, currVW*1.5);
       context.globalCompositeOperation = 'source-over';
     };
-
   }, []);
   
   return <canvas ref={canvasRef} width={windowWidth} height={windowWidth*1.5} {...props} />
