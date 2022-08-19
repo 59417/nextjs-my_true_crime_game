@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import  { src } from './tempSrc';
 
 
 export default function MyCanvas (props) {
@@ -6,7 +7,7 @@ export default function MyCanvas (props) {
   const canvasRef = useRef(null);
   
   const num = props.num;
-  const src = props.src;
+  // const src = props.src;
   const [windowWidth, setWindowWidth] = useState(null);
 
   
