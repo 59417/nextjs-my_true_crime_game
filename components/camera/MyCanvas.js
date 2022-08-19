@@ -40,7 +40,14 @@ export default function MyCanvas (props) {
     image.src = src;
     image.onload = () => {
       context.globalCompositeOperation = 'destination-over';
-      context.drawImage(image, 0, 0);
+      context.beginPath();
+      //我們用moveTo(x,y)來指定線的起點座標
+      context.moveTo(50,50)
+      //之後使用lineTo(x,y)來指定與前一個座標相連的點
+      context.lineTo(100,250)
+      //用stroke()來繪製相連點的線
+      context.stroke()
+      context.drawImage(image, 0, 0, currVW, currVW*1.5);
       context.globalCompositeOperation = 'source-over';
     };
 
