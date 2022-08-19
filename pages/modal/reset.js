@@ -8,7 +8,7 @@ export default function ModalWarning() {
       <Head>
         <title>My Game</title>
         <meta name="description" content="My game" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
