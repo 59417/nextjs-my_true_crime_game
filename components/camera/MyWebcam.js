@@ -96,9 +96,9 @@ export default function MyWebcam(props) {
 
 
             {imgSrc && (
-                <div className={classes.photo}>
+                // <div className={classes.photo}>
                     <MyCanvas src={imgSrc} num={pass.length} />
-                </div>
+                // </div>
             )}
 
             <div className={classes.btn_wrapper}>
