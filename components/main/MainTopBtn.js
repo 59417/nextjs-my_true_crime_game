@@ -1,6 +1,4 @@
-// import { useRouter } from "next/router";
 import Link from "next/link";
-// import { Fragment, useState, useEffect } from 'react';
 import classes from '../common/TopBtn.module.scss';
 
 export default function MainTopBtn(props) {

@@ -3,13 +3,13 @@ import MainCrad from "../common/MainCard";
 import MainTopBtn from "./MainTopBtn";
 import MainContent from "./MainContent";
 
-export default function Main(props) {
+export default function Main() {
     
     const [states, setStates] = useState({});
     useEffect(() => { 
         const localStorageState = localStorage.getItem("state");
         setStates(JSON.parse(localStorageState));
-    }, [ setStates, ]);
+    }, [ setStates ]);
 
 
     const getStageHref = (id) => {

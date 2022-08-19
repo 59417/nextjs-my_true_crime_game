@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-// import classes from './HintContent.module.scss';
 import classes from '../Content.module.scss';
 import { hintData } from '../../data/hint';
 

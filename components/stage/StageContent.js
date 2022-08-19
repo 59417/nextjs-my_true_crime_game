@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-// import classes from './StageContent.module.scss';
 import classes from './Content.module.scss';
 import { ansData } from '../data/ans';
 

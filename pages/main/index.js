@@ -1,10 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-// import { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import styles from '../../styles/Home.module.css';
 import Main from '../../components/main/Main';
-// import TestBtn from '../../components/TestBtn';
 import Reset from '../../components/modal/Reset'; 
 import Help from '../../components/modal/Help';
 import { HelpStyle, QuitStyle } from '../../components/modal/modalStyle';
@@ -18,11 +16,6 @@ export default function PageMain() {
     const isHelpRouter = router.query.modalHelp;
     const isResetRouter = router.query.modalReset;
 
-    // for testing
-    // const [testState, setTestState] = useState(null);
-    // useEffect(() => {
-    // },[testState, setTestState])
-
     return (
         <div className={styles.container}>
             <Head>
@@ -33,9 +26,7 @@ export default function PageMain() {
             </Head>
 
             <main className={styles.main} >
-                {/* <TestBtn setTestState={setTestState}/> */}
                 <Main isHelpOpen={isHelpRouter}  /> 
-                {/* isTest={testState}  // for testing */}
 
                 <Modal isOpen={!!isResetRouter} style={QuitStyle()} >
                     <Reset />

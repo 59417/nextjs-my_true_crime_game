@@ -969,6 +969,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+html-to-image@^1.10.4:
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/html-to-image/-/html-to-image-1.10.4.tgz#c44f393db10d139a01eadcf94a5242e7b2e1ec9c"
+  integrity sha512-nJ9uiWCkD/egDN0F6wzbCfpjc/1ZChutABD3SgnRRwNlZpUhhCFK/dRuVAmyEFgrQFacYW5hyURRLlSdZw8cgQ==
+
 ignore@^5.2.0:
   version "5.2.0"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz"
