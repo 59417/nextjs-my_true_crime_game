@@ -15,7 +15,7 @@ export default function MyWebcam(props) {
     let videoConstraints = {
         width: {min: 414},
         height: {min: 621},
-        aspectRatio: 2/3,
+        aspectRatio: 3/2,
         facingMode: facingMode,
     };
     
@@ -57,7 +57,7 @@ export default function MyWebcam(props) {
                 {!imgSrc ? (
                     // <div id={classes.webcam_wrapper}>
                         <Webcam
-                            ref={webcamRef}
+                            ref={webcamRef} 
                             audio={false}
                             screenshotFormat="image/jpeg"
                             videoConstraints={videoConstraints}
