@@ -12,24 +12,22 @@ export default function MyWebcam(props) {
     const [imgSrc, setImgSrc] = useState(null);
     const [facingMode, setFavingMode] = useState('environment');
     
-    const videoConstraints = {
-        width: { min: 480 },
-        height: { min: 420 },
+    let videoConstraints = {
+        width: {min: 414},
+        height: {min: 621},
         aspectRatio: 2/3,
-        facingMode: "environment" || "face",
+        facingMode: facingMode,
     };
     
     const capturePhoto = useCallback(async() => {
-        console.log('Capturing...');
         const curImgSrc = await webcamRef.current.getScreenshot();
         setImgSrc(curImgSrc);
         setIsTakingPhoto(true);
     }, [webcamRef]);
 
     const handleTurn = () => {
-        const isFace = facingMode==='face' ? 'environment' : 'face';
+        const isFace = facingMode==='user' ? 'environment' : 'user';
         setFavingMode(isFace);
-        videoConstraints.facingMode = isFace;
     };
 
     const onUserMedia = (e) => {
@@ -40,7 +38,8 @@ export default function MyWebcam(props) {
         const localStorageState = JSON.parse(localStorage.getItem("state"));
         const passNum = Object.values(localStorageState.pass).filter(ele=>ele===true);
         setPass(passNum);
-    },[facingMode]);
+        console.log('render', videoConstraints.facingMode);
+    },[]);
 
     return (
         <div className={classes.content}>
@@ -56,19 +55,21 @@ export default function MyWebcam(props) {
                     ))}
                 </div>
                 {!imgSrc ? (
-                    <div id={classes.webcam_wrapper}>
+                    // <div id={classes.webcam_wrapper}>
                         <Webcam
                             ref={webcamRef}
                             audio={false}
                             screenshotFormat="image/jpeg"
                             videoConstraints={videoConstraints}
+                            width={`100%`}
+                            height={`100%`}
                             onUserMedia={onUserMedia}
-                            mirrored={facingMode==="face"}
+                            mirrored={videoConstraints.facingMode==="user"}
                         />
-                    </div>
+                    // </div>
                 ) : (
                     <div>
-                        <img src={imgSrc} alt="Screenshot" id="screenshot" />
+                        <img src={imgSrc} alt="Screenshot" />
                     </div>
                 )}
             </div>

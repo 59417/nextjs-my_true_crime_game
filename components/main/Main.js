@@ -9,22 +9,7 @@ export default function Main(props) {
     useEffect(() => { 
         const localStorageState = localStorage.getItem("state");
         setStates(JSON.parse(localStorageState));
-        // if (!localStorageState) {
-        //     const initStates = { 
-        //         visited: Object.fromEntries(ids.map(ele => [ele, false])),
-        //         hint: Object.fromEntries(ids.map(ele => [ele, { 1: false, 2: false, 3: false }])),
-        //         pass: Object.fromEntries(ids.map(ele => [ele, false])),
-        //     };
-        //     localStorage.setItem("state", JSON.stringify(initStates));
-        // } else {
-        //     setStates(JSON.parse(localStorageState));
-        // };
-    }, 
-    [
-        setStates,
-        // props.isTest  // for testing
-    ]
-    );
+    }, [ setStates, ]);
 
 
     const getStageHref = (id) => {
